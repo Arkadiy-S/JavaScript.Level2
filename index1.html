@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script></script>
+</head>
+<body>
+
+ 
+  <br>
+  <button onclick = "foo_Date()">Текущая дата-время</button>
+  <!-- новый код HTML-->
+  <!--  button onclick = "fooWinMoveTo()">Смещение окна</button-->
+  <!-- новый код HTML-->
+
+
+
+  
+
+  <script>
+  // новый код JavaScript
+	//var winGlob;
+	
+	/*
+	function fooWinMoveTo()	{
+	winGlob.moveBy(100, 50);
+	winGlob.document.write ( "<mark>тест</mark>" );
+	}
+	*/
+	
+	function foo_Date(){
+	var win = open ( "" , "win123" , "width=400,height=100" );
+	//winGlob = win;
+	setInterval(
+	function (){
+	win . document . write (( new Date (). toLocaleTimeString ()));
+	win . document . close ();
+	}
+	, 1000 ); 
+	}
+	
+	var i = 1 , step = 7 , t = 1000;
+	function anima (){
+	if ( i <= step ){
+	document.body.innerHTML += i ++ + " ";
+	setTimeout ( anima , t );
+}
+}
+anima ();
+	
+	
+  </script>
+</body>
+</html>
